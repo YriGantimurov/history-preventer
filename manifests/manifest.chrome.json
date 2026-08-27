@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "History Preventer",
+  "version": "1.2",
+  "description": "Automatically removes specified sites and pages with keywords in title from browser history immediately after they are loaded.",
+  "permissions": ["history", "storage", "webNavigation", "tabs"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup/edit_block_list.html",
+    "default_title": "Manage Clean Lists",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}

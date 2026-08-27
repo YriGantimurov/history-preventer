@@ -1,0 +1,15 @@
+{
+  "name": "dhbre",
+  "version": "1.0.0",
+  "description": "Automatically removes specified sites and pages with keywords in title from browser history immediately after they are loaded",
+  "license": "ISC",
+  "author": "korneevIuE",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node scripts/build.js",
+    "build:firefox": "web-ext build --source-dir=dist/firefox --overwrite-dest",
+    "build:chrome": "cd dist/chrome && zip -r ../history-cleaner-chrome.zip ."
+  }
+}

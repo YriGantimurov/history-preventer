@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="edit_block_list.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>History Preventer</h2>
+      <p class="subtitle">
+        Pages matching sites or keywords are automatically removed from history
+        after loading
+      </p>
+
+      <!-- Sites (by URL) -->
+      <div class="section">
+        <h3>🌐 By URL</h3>
+        <div class="add-section">
+          <input type="text" id="siteInput" placeholder="example.com" />
+          <button id="addSiteBtn">➕</button>
+        </div>
+        <div class="visibility-controls">
+          <button class="show-all" data-type="site" title="Show all">👁️</button>
+          <button class="hide-all" data-type="site" title="Hide all">🙈</button>
+        </div>
+        <ul id="siteList"></ul>
+        <p id="emptySites" class="empty">Site list is empty</p>
+      </div>
+
+      <!-- Keywords (by title) -->
+      <div class="section">
+        <h3>📌 By Title</h3>
+        <div class="add-section">
+          <input type="text" id="titleInput" placeholder="News" />
+          <button id="addTitleBtn">➕</button>
+        </div>
+        <div class="visibility-controls">
+          <button class="show-all" data-type="title" title="Show all">
+            👁️
+          </button>
+          <button class="hide-all" data-type="title" title="Hide all">
+            🙈
+          </button>
+        </div>
+        <ul id="titleList"></ul>
+        <p id="emptyTitles" class="empty">Keyword list is empty</p>
+      </div>
+
+      <!-- Clear history button -->
+      <div class="actions">
+        <button id="clearHistoryBtn" class="danger-btn">
+          🧹 Remove all matching entries from history
+        </button>
+      </div>
+
+      <!-- Notification container -->
+      <div id="notification-container"></div>
+
+      <!-- Confirmation overlay -->
+      <div id="confirmation-overlay" class="hidden">
+        <div class="confirmation-box">
+          <p id="confirmation-message"></p>
+          <div class="confirmation-buttons">
+            <button id="confirmation-yes" class="confirm-btn">Yes</button>
+            <button id="confirmation-no" class="confirm-btn cancel">No</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../polyfill/browser-polyfill.min.js"></script>
+    <script src="edit_block_list.js"></script>
+  </body>
+</html>
